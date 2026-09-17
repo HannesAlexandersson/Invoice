@@ -20,6 +20,10 @@ namespace Invoice
         {
 
         }
+        public static void Calculations()
+        {
+            // do calculations
+        }
 
         // PRIVATE METHODS
         private static double CalculatePayment()
