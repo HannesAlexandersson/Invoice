@@ -1,0 +1,37 @@
+[
+  {
+    "Name": "Dewalt grinder",
+    "Price": 1499.00,
+    "Weight": 4.2,
+    "Dimensions": "40x20x15",
+    "ProductId": "DW001"
+  },
+  {
+    "Name": "Samsung worklight",
+    "Price": 799.00,
+    "Weight": 2.1,
+    "Dimensions": "25x15x10",
+    "ProductId": "SW001"
+  },
+  {
+    "Name": "Link occarina",
+    "Price": 999.00,
+    "Weight": 1.5,
+    "Dimensions": "2x3x2",
+    "ProductId": "LO001"
+  },
+  {
+    "Name": "Excalibur celtic longsword",
+    "Price": 4499.00,
+    "Weight": 5.5,
+    "Dimensions": "100x10x10",
+    "ProductId": "ECL001"
+  },
+  {
+    "Name": "Yamaha battleaxe",
+    "Price": 2499.00,
+    "Weight": 6.5,
+    "Dimensions": "100x30x10",
+    "ProductId": "YB001"
+  }
+]
