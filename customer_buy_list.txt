@@ -1,3 +1,0 @@
-DW001,Dewalt grinder,1499,4.2
-SW001,Samsung worklight,799,2.1
-YB001,Yamaha battleaxe,2499,6.5

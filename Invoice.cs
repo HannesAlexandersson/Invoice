@@ -1,42 +1,89 @@
 
 namespace Invoice
 {
-    class Invoice
+    class Invoice(Customer customer)
     {
-        double Sum = CalculatePayment();
-        string DeliveryAddress;
-        string CustomerAddress;
-        string InvoiceId;
-        List<Product> Products = [];
-
-        // PUBLIC METHODS
-        public static void PayInvoice()
+        private ProductCatalog _catalog = new();
+        private double Sum;
+        private string InvoiceId = Guid.NewGuid().ToString();
+        private readonly DateTime InvoiceDate = DateTime.Now;
+        private List<Product> Products = [];
+        private Customer Customer { get; } = customer;
+        public void ViewInvoice()
         {
-            CalculatePayment();
-            CompletePayment();
+            _catalog.LoadProducts(); // load the catalog 
+            string filePath = "C:\\Users\\s1031\\Documents\\GitHub\\Invoice\\customer_buy_list.txt";
+
+            if (!File.Exists(filePath))
+            {
+                Console.WriteLine("No products found.");
+                Console.ReadKey();
+                return;
+            }
+
+            string[] customerBuyList = File.ReadAllLines(filePath);
+
+            foreach (string line in customerBuyList)
+            {
+                string[] data = line.Split(',');
+                string productId = data[0];
+
+                foreach (Product product in _catalog.Products.Values)
+                {
+                    if (product.ProductId == productId)
+                    {
+                        Products.Add(product);
+                        break;
+                    }
+                }
+            }
+
+            Console.Clear();
+
+            Console.WriteLine("INVOICE");
+            Console.WriteLine("================================");
+            Console.WriteLine($"Invoice ID: {InvoiceId}");
+            Console.WriteLine($"Date: {InvoiceDate}");
+            Console.WriteLine();
+
+            Console.WriteLine("CUSTOMER");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine($"Name: {Customer.GetFullName()}");
+            Console.WriteLine($"Address: {Customer.GetAddress()}");
+            Console.WriteLine($"Phone: {Customer.GetPhoneNumbr()}");
+            Console.WriteLine();
+
+            Console.WriteLine("DELIVERY");
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine($"Address: {Customer.GetAddress()}");
+            Console.WriteLine($"Planned Delivery Date: {InvoiceDate.AddDays(3.0)}");
+
+            Console.WriteLine();
+
+            Console.WriteLine("PRODUCTS");
+            Console.WriteLine("--------------------------------");
+
+            foreach (Product product in Products)
+            {
+                Console.WriteLine($"{product.Name} - {product.Price} kr");
+                Sum += product.Price;
+            }
+
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine($"TOTAL: {Sum} kr");
+
+            Console.ReadKey();
         }
 
-        public static void ViewInvoice()
+        public void PayInvoice()
         {
+            Console.WriteLine($"Paying invoice {InvoiceId}...");
+            Console.WriteLine("Confirm payment by pressing any key....");
+            Console.ReadKey();
 
+            string filePath = "C:\\Users\\s1031\\Documents\\GitHub\\Invoice\\customer_buy_list.txt";
+
+            File.WriteAllText(filePath, "");
         }
-        public static void Calculations()
-        {
-            // do calculations
-        }
-
-        // PRIVATE METHODS
-        private static double CalculatePayment()
-        {
-            // internal logic add toghether all products in Products and return the total sum
-            return 0.0;
-        }
-
-        private static void CompletePayment()
-        {
-            // simulate paying the invoice: print pay and then remoce the products from the list of products. 
-        }
-
-
     }
 }

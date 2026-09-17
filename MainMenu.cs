@@ -11,7 +11,8 @@ namespace Invoice
         "1. Browse products",
         "2. Add products",
         "3. Remove products",
-        "4. Exit"
+        "4. Manage Invoice",
+        "5. Exit"
     };
 
         private int menuSelect = 0;
@@ -24,7 +25,7 @@ namespace Invoice
                 Console.CursorVisible = false;
                 if (menuSelect == 0)
                 {
-                    Console.WriteLine("Invoice manager 2000");
+                    Console.WriteLine("Catalog order 2000");
                     Console.WriteLine("*********************");
                     Console.WriteLine("* " + menuOptions[0] + " *");
                     Console.WriteLine("- - - - - - - - - - -");
@@ -34,10 +35,12 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[3]);
                     Console.WriteLine("- - - - - - - - - - -");
+                    Console.WriteLine(menuOptions[4]);
+                    Console.WriteLine("- - - - - - - - - - -");
                 }
                 else if (menuSelect == 1)
                 {
-                    Console.WriteLine("Invoice manager 2000");
+                    Console.WriteLine("Catalog order 2000");
                     Console.WriteLine("*********************");
                     Console.WriteLine(menuOptions[0]);
                     Console.WriteLine("- - - - - - - - - - -");
@@ -47,10 +50,12 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[3]);
                     Console.WriteLine("- - - - - - - - - - -");
+                    Console.WriteLine(menuOptions[4]);
+                    Console.WriteLine("- - - - - - - - - - -");
                 }
                 else if (menuSelect == 2)
                 {
-                    Console.WriteLine("Invoice manager 2000");
+                    Console.WriteLine("Catalog order 2000");
                     Console.WriteLine("*********************");
                     Console.WriteLine(menuOptions[0]);
                     Console.WriteLine("- - - - - - - - - - -");
@@ -60,10 +65,12 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[3]);
                     Console.WriteLine("- - - - - - - - - - -");
+                    Console.WriteLine(menuOptions[4]);
+                    Console.WriteLine("- - - - - - - - - - -");
                 }
                 else if (menuSelect == 3)
                 {
-                    Console.WriteLine("Invoice manager 2000");
+                    Console.WriteLine("Catalog order 2000");
                     Console.WriteLine("*********************");
                     Console.WriteLine(menuOptions[0]);
                     Console.WriteLine("- - - - - - - - - - -");
@@ -73,10 +80,12 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine("* " + menuOptions[3] + " *");
                     Console.WriteLine("- - - - - - - - - - -");
+                    Console.WriteLine(menuOptions[4]);
+                    Console.WriteLine("- - - - - - - - - - -");
                 }
                 else if (menuSelect == 4)
                 {
-                    Console.WriteLine("Invoice manager 2000");
+                    Console.WriteLine("Catalog order 2000");
                     Console.WriteLine("*********************");
                     Console.WriteLine(menuOptions[0]);
                     Console.WriteLine("- - - - - - - - - - -");
@@ -85,6 +94,8 @@ namespace Invoice
                     Console.WriteLine(menuOptions[2]);
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[3]);
+                    Console.WriteLine("- - - - - - - - - - -");
+                    Console.WriteLine("* " + menuOptions[4] + " *");
                     Console.WriteLine("- - - - - - - - - - -");
 
                 }
@@ -112,6 +123,10 @@ namespace Invoice
                             shop.RemoveProduct();
                             break;
                         case 3:
+                            InvoiceManager invoiceManager = new();
+                            invoiceManager.Run();
+                            break;
+                        case 4:
                             Terminate();
                             break;
                         default:
