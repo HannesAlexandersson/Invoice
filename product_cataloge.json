@@ -5,6 +5,12 @@
     "Weight": 4.2,
     "ProductId": "DW001"
   },
+  "Party hat": {
+    "Name": "Party hat",
+    "Price": 9.99,
+    "Weight": 0.2,
+    "ProductId": "PH001"
+  },
   "Samsung worklight": {
     "Name": "Samsung worklight",
     "Price": 799.00,
@@ -28,5 +34,65 @@
     "Price": 2499.00,
     "Weight": 6.5,
     "ProductId": "YB001"
+  },
+  "Bosch plasma hammer": {
+    "Name": "Bosch plasma hammer",
+    "Price": 3299.00,
+    "Weight": 7.2,
+    "ProductId": "BPH001"
+  },
+  "Makita thunder drill": {
+    "Name": "Makita thunder drill",
+    "Price": 1899.00,
+    "Weight": 3.8,
+    "ProductId": "MTD001"
+  },
+  "Samsung laser wrench": {
+    "Name": "Samsung laser wrench",
+    "Price": 1299.00,
+    "Weight": 2.4,
+    "ProductId": "SLW001"
+  },
+  "Dewalt dragon saw": {
+    "Name": "Dewalt dragon saw",
+    "Price": 2799.00,
+    "Weight": 5.1,
+    "ProductId": "DDS001"
+  },
+  "LG orbital toaster": {
+    "Name": "LG orbital toaster",
+    "Price": 899.00,
+    "Weight": 3.2,
+    "ProductId": "LOT001"
+  },
+  "Yamaha war mallet": {
+    "Name": "Yamaha war mallet",
+    "Price": 1599.00,
+    "Weight": 4.7,
+    "ProductId": "YWM001"
+  },
+  "Philips tactical flashlight": {
+    "Name": "Philips tactical flashlight",
+    "Price": 649.00,
+    "Weight": 1.1,
+    "ProductId": "PTF001"
+  },
+  "Link master screwdriver": {
+    "Name": "Link master screwdriver",
+    "Price": 749.00,
+    "Weight": 1.8,
+    "ProductId": "LMS001"
+  },
+  "Excalibur power drill": {
+    "Name": "Excalibur power drill",
+    "Price": 3999.00,
+    "Weight": 6.3,
+    "ProductId": "EPD001"
+  },
+  "Samsung siege lantern": {
+    "Name": "Samsung siege lantern",
+    "Price": 1099.00,
+    "Weight": 2.7,
+    "ProductId": "SSL001"
   }
 }
