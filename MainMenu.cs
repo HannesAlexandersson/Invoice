@@ -34,8 +34,6 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[3]);
                     Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[4]);
-                    Console.WriteLine("- - - - - - - - - - -");
                 }
                 else if (menuSelect == 1)
                 {
@@ -108,10 +106,10 @@ namespace Invoice
                             shop.BrowseProductCataloge();
                             break;
                         case 1:
-                            //  shop.Addproduct();
+                            shop.AddProduct();
                             break;
                         case 2:
-                            // shop.RemoveProduct();
+                            shop.RemoveProduct();
                             break;
                         case 3:
                             Terminate();

@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json;
+
 
 namespace Invoice
 {
@@ -11,8 +9,10 @@ namespace Invoice
 
         public void LoadProducts()
         {
-            // read JSON
-            // turn JSON into Dictionary<string, Product>
+            string json = File.ReadAllText("product_cataloge.json");
+
+            Products = JsonSerializer.Deserialize<Dictionary<string, Product>>(json)
+                ?? [];
         }
     }
 }
