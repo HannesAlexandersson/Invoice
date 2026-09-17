@@ -1,12 +1,12 @@
 
 namespace Invoice
 {
-    public class Product(string productid, double productPrice, double productWeight, string productName)
+    public class Product
     {
-        private string ProductId { get; set; } = productid;
-        private double ProductPrice { get; set; } = productPrice;
-        private double ProductWeight { get; set; } = productWeight;
-        private string ProductName { get; set; } = productName;
+        public string? ProductId { get; set; }
+        public double Price { get; set; }
+        public double Weight { get; set; }
+        public string? Name { get; set; }
 
     }
 }

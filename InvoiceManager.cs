@@ -7,9 +7,7 @@ namespace Invoice
         "1. View invoices",
         "2. Pay",
         "3. Calculations",
-        "4. Add products",
-        "5. Remove products",
-        "6. Exit"
+        "4. Exit"
     };
 
         private int menuSelect = 0;

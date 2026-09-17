@@ -5,6 +5,7 @@ namespace Invoice
 {
     public class MainMenu
     {
+        private Shop shop = new Shop(); // create an shop object so we can use its methods
         private string[] menuOptions =
     {
         "1. Browse products",
@@ -35,12 +36,6 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[4]);
                     Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[5]);
-                    Console.WriteLine("- - - - - - - - - - -");
-
-
-
-
                 }
                 else if (menuSelect == 1)
                 {
@@ -54,14 +49,6 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[3]);
                     Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[4]);
-                    Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[5]);
-                    Console.WriteLine("- - - - - - - - - - -");
-
-
-
-
                 }
                 else if (menuSelect == 2)
                 {
@@ -75,14 +62,6 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[3]);
                     Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[4]);
-                    Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[5]);
-                    Console.WriteLine("- - - - - - - - - - -");
-
-
-
-
                 }
                 else if (menuSelect == 3)
                 {
@@ -96,14 +75,6 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine("* " + menuOptions[3] + " *");
                     Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[4]);
-                    Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[5]);
-                    Console.WriteLine("- - - - - - - - - - -");
-
-
-
-
                 }
                 else if (menuSelect == 4)
                 {
@@ -117,10 +88,7 @@ namespace Invoice
                     Console.WriteLine("- - - - - - - - - - -");
                     Console.WriteLine(menuOptions[3]);
                     Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine("* " + menuOptions[4] + " *");
-                    Console.WriteLine("- - - - - - - - - - -");
-                    Console.WriteLine(menuOptions[5]);
-                    Console.WriteLine("- - - - - - - - - - -");
+
                 }
 
                 var keyPressed = Console.ReadKey();
@@ -137,27 +105,29 @@ namespace Invoice
                     switch (menuSelect)
                     {
                         case 0:
-                            Invoice.ViewInvoice();
+                            shop.BrowseProductCataloge();
                             break;
                         case 1:
-                            Product.Addproduct();
+                            //  shop.Addproduct();
                             break;
                         case 2:
-                            Product.RemoveProduct();
+                            // shop.RemoveProduct();
                             break;
                         case 3:
                             Terminate();
-
                             break;
-                        case 4:
-
                         default:
                             Terminate();
                             break;
-
                     }
                 }
             }
+        }
+
+        public void Terminate()
+        {
+            Console.WriteLine("Goodbye!");
+            Environment.Exit(0);
         }
     }
 }
